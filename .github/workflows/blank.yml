@@ -33,3 +33,9 @@ jobs:
       - name: sha256sum
         run: |  
           sha256sum rustc-1.85.1-src.tar.xz
+
+      - name: upload to release
+        uses: softprops/action-gh-release@v2.2.1
+        with:
+          tag_name: rust
+          files: rustc-1.85.1-src.tar.xz
