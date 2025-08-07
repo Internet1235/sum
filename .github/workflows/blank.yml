@@ -58,7 +58,7 @@ jobs:
             clouddrive-2-linux-armv7-0.8.17.tgz
             clouddrive-2-linux-x86_64-0.8.17.tgz
 
-       - name: upload to release
+      - name: upload to release
         uses: softprops/action-gh-release@v2.2.1
         with:
           tag_name: sing-box
