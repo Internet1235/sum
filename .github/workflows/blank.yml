@@ -32,6 +32,7 @@ jobs:
           wget https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v0.8.17/clouddrive-2-linux-aarch64-0.8.17.tgz
           wget https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v0.8.17/clouddrive-2-linux-armv7-0.8.17.tgz
           wget https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v0.8.17/clouddrive-2-linux-x86_64-0.8.17.tgz
+          wget https://github.com/SagerNet/sing-box/archive/refs/tags/v1.12.0.tar.gz
 
       - name: sha256sum
         run: |  
@@ -39,6 +40,7 @@ jobs:
           sha256sum clouddrive-2-linux-aarch64-0.8.17.tgz
           sha256sum clouddrive-2-linux-armv7-0.8.17.tgz
           sha256sum clouddrive-2-linux-x86_64-0.8.17.tgz
+          sha256sum sing-box-1.12.0.tar.gz
 
       - name: upload to release
         uses: softprops/action-gh-release@v2.2.1
@@ -55,3 +57,9 @@ jobs:
             clouddrive-2-linux-aarch64-0.8.17.tgz
             clouddrive-2-linux-armv7-0.8.17.tgz
             clouddrive-2-linux-x86_64-0.8.17.tgz
+
+       - name: upload to release
+        uses: softprops/action-gh-release@v2.2.1
+        with:
+          tag_name: sing-box
+          files: sing-box-1.12.0.tar.gz
