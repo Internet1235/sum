@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: download
         run: |
-          wget https://static.rust-lang.org/dist/rustc-1.89.0-src.tar.gz
+          wget https://static.rust-lang.org/dist/rustc-1.89.0-src.tar.xz
           wget https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v0.8.17/clouddrive-2-linux-aarch64-0.8.17.tgz
           wget https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v0.8.17/clouddrive-2-linux-armv7-0.8.17.tgz
           wget https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v0.8.17/clouddrive-2-linux-x86_64-0.8.17.tgz
@@ -37,7 +37,7 @@ jobs:
 
       - name: sha256sum
         run: |  
-          sha256sum rustc-1.89.0-src.tar.gz
+          sha256sum rustc-1.89.0-src.tar.xz
           sha256sum clouddrive-2-linux-aarch64-0.8.17.tgz
           sha256sum clouddrive-2-linux-armv7-0.8.17.tgz
           sha256sum clouddrive-2-linux-x86_64-0.8.17.tgz
@@ -48,7 +48,7 @@ jobs:
         with:
           tag_name: rust
           files: |
-            rustc-1.89.0-src.tar.gz
+            rustc-1.89.0-src.tar.xz
             rustup-init.exe
             rustc-1.90.0-src.tar.gz
 
