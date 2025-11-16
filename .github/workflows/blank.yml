@@ -41,7 +41,7 @@ jobs:
           sha256sum clouddrive-2-linux-aarch64-0.8.17.tgz
           sha256sum clouddrive-2-linux-armv7-0.8.17.tgz
           sha256sum clouddrive-2-linux-x86_64-0.8.17.tgz
-          sha256sum rustc-1.91.0-src.tar.xz
+          sha256sum rustc-1.91.1-src.tar.xz
 
       - name: upload to release
         uses: softprops/action-gh-release@v2.2.1
@@ -50,7 +50,7 @@ jobs:
           files: |
             rustc-1.89.0-src.tar.xz
             rustup-init.exe
-            rustc-1.91.0-src.tar.xz
+            rustc-1.91.1-src.tar.xz
 
       - name: upload to release
         uses: softprops/action-gh-release@v2.2.1
