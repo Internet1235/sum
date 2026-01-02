@@ -43,6 +43,14 @@ jobs:
           sha256sum clouddrive-2-linux-x86_64-0.8.17.tgz
           sha256sum rustc-1.92.0-src.tar.xz
 
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: rust
+          path: |
+            rustc-1.92.0-src.tar.xz
+            rustc-1.89.0-src.tar.xz
+
       - name: upload to release
         uses: softprops/action-gh-release@v2.2.1
         with:
