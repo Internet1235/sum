@@ -34,7 +34,7 @@ jobs:
           wget https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v0.8.17/clouddrive-2-linux-x86_64-0.8.17.tgz
           wget https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe
           wget https://static.rust-lang.org/dist/rustc-1.95.0-src.tar.xz
-          wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.138.tar.xz
+          wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.28.tar.xz
 
       - name: sha256sum
         run: |  
@@ -75,4 +75,4 @@ jobs:
         with:
           tag_name: linux-kernel
           files: |
-            linux-6.6.138.tar.xz
+            linux-6.18.28.tar.xz
